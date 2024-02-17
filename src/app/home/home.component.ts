@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterModule } from '@angular/router';
+import { NavigationComponent } from '../navigation/navigation.component';
+import { ProjectsComponent } from '../projects/projects.component';
+import { ToolboxComponent } from '../toolbox/toolbox.component';
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule,NavigationComponent],
+  imports: [RouterModule,NavigationComponent,ProjectsComponent,ToolboxComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'
 })

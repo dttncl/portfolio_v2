@@ -12,6 +12,11 @@ export const routes: Routes = [
           import('./projects/projects.component').then((m) => m.ProjectsComponent),
       },
     {
+        path: 'toolbox',
+        loadComponent: () =>
+          import('./toolbox/toolbox.component').then((m) => m.ToolboxComponent),
+      },
+    {
         path: '',
         loadComponent: () =>
           import('./welcome/welcome.component').then((m) => m.WelcomeComponent),
