@@ -3,6 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ToolboxComponent } from './toolbox/toolbox.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 
 
@@ -22,5 +23,10 @@ export const routes: Routes = [
     {
         path: '',
         component: WelcomeComponent
+      },
+    {
+        path: '**',
+        pathMatch: 'full',
+        component: PagenotfoundComponent
       },
 ];
