@@ -1,24 +1,26 @@
 import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ToolboxComponent } from './toolbox/toolbox.component';
+import { WelcomeComponent } from './welcome/welcome.component';
+
+
 
 export const routes: Routes = [
     {
         path: 'home',
-        loadComponent: () =>
-          import('./home/home.component').then((m) => m.HomeComponent),
+        component: HomeComponent
       },
     {
         path: 'projects',
-        loadComponent: () =>
-          import('./projects/projects.component').then((m) => m.ProjectsComponent),
+        component: ProjectsComponent
       },
     {
         path: 'toolbox',
-        loadComponent: () =>
-          import('./toolbox/toolbox.component').then((m) => m.ToolboxComponent),
+        component: ToolboxComponent
       },
     {
         path: '',
-        loadComponent: () =>
-          import('./welcome/welcome.component').then((m) => m.WelcomeComponent),
+        component: WelcomeComponent
       },
 ];
