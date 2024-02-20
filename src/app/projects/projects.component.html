@@ -2,54 +2,23 @@
 <main>
     <a href="https://github.com/dttncl?tab=repositories" target="_blank"><h2>View Archive</h2></a>
     <div class="container">
-        <div class="card">
+        <!-- project cards -->
+        <div *ngFor="let project of projects" class="card">
             <div class="link-header">
-                <a href="https://github.com/dttncl/etch-a-sketch" target="_blank"><img src="/assets/github.svg" class="contact-icon"></a>
-                <a href="https://dttncl.github.io/etch-a-sketch/" target="_blank"><img src="/assets/link.svg" class="contact-icon"></a>
+                <a href="{{project.github}}" target="_blank"><img src="/assets/github.svg" class="contact-icon"></a>
+                <a href="{{project.live}}" target="_blank"><img src="/assets/link.svg" class="contact-icon"></a>
             </div>
             <div class="card-details">
-                <h2>Restaurant Menu Website</h2>
+                <h2>{{project.name}}</h2>
                 <div class="card-tags">
-                    <p class="tag">HTML</p>
-                    <p class="tag">CSS</p>
-                    <p class="tag">JavaScript</p>
+                    <p *ngFor="let language of project.languages" class="tag">{{language}}</p>
                 </div>
-                <p>This is a responsive restaurant menu website created for my Web Development class. It uses DOM to manipulate HTML elements, handle events, and update the content dynamically.</p>
+                <p>{{project.desc}}</p>
             </div>
         </div>
-
-        <div class="card">
-            <div class="link-header">
-                <a href="https://github.com/dttncl/etch-a-sketch" target="_blank"><img src="/assets/github.svg" class="contact-icon"></a>
-                <a href="https://dttncl.github.io/etch-a-sketch/" target="_blank"><img src="/assets/link.svg" class="contact-icon"></a>
-            </div>
-            <div class="card-details">
-                <h2>Restaurant Menu Website</h2>
-                <div class="card-tags">
-                    <p class="tag">HTML</p>
-                    <p class="tag">CSS</p>
-                    <p class="tag">JavaScript</p>
-                </div>
-                <p>This is a responsive restaurant menu website created for my Web Development class. It uses DOM to manipulate HTML elements, handle events, and update the content dynamically.</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="link-header">
-                <a href="https://github.com/dttncl/etch-a-sketch" target="_blank"><img src="/assets/github.svg" class="contact-icon"></a>
-                <a href="https://dttncl.github.io/etch-a-sketch/" target="_blank"><img src="/assets/link.svg" class="contact-icon"></a>
-            </div>
-            <div class="card-details">
-                <h2>Restaurant Menu Website</h2>
-                <div class="card-tags">
-                    <p class="tag">HTML</p>
-                    <p class="tag">CSS</p>
-                    <p class="tag">JavaScript</p>
-                </div>
-                <p>This is a responsive restaurant menu website created for my Web Development class. It uses DOM to manipulate HTML elements, handle events, and update the content dynamically.</p>
-            </div>
-        </div>
+        <!-- end of project cards -->
     </div>
+
+    
 </main>
 
-<app-footer/>

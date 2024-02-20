@@ -17,8 +17,8 @@ export class InMemoryDataService implements InMemoryDbService {
     },
     {
       name: 'Villagô - Virtual Service Finder',
-      languages: ['HTML', 'CSS', 'Javascript', 'PHP', 'MySQL', 'GoogleMaps API'],
-      desc: 'It comes with a search feature, enabling users to find service providers that meet their specific needs and preferences, whether it\'s language, cultural background, or other criteria. It also features a map to locate nearby service providers, making it easy to find solutions within a specific distance. PHP is used for server-side processing such as interacting with database and processing form submissions.',
+      languages: ['Javascript', 'PHP', 'MySQL', 'GoogleMaps API'],
+      desc: 'This is presented as my final project for web server. It comes with a search feature, enabling users to find service providers that meet their specific needs and a map to locate nearby service providers. PHP is used for server-side processing such as interacting with database and processing form submissions.',
       github: 'https://github.com/dttncl/villago',
       live: '',
     },
