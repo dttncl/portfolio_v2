@@ -1,6 +1,11 @@
 <main>
-    <div class="icon"></div>
-    <a routerLink="/home">HOME</a>
-    <a routerLink="/projects" routerLinkActive="activebutton">PROJECTS</a>
-    <a routerLink="/toolbox" routerLinkActive="activebutton">TOOLBOX</a>
+    <div class="left">
+        <div class="icon"></div>
+        <a routerLink="/home" routerLinkActive="activebutton barbie">HOME</a>
+        <a routerLink="/projects" routerLinkActive="activebutton barbie">PROJECTS</a>
+        <a routerLink="/toolbox" routerLinkActive="activebutton barbie">TOOLBOX</a>
+    </div>
+    <div class="right">
+        <img src="/assets/palette.png" class="palette" (click)="switchTheme()">
+    </div>
 </main>

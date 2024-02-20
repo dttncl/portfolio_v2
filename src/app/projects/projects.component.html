@@ -5,8 +5,8 @@
         <!-- project cards -->
         <div *ngFor="let project of projects" class="card">
             <div class="link-header">
-                <a href="{{project.github}}" target="_blank"><img src="/assets/github.svg" class="contact-icon"></a>
-                <a href="{{project.live}}" target="_blank"><img src="/assets/link.svg" class="contact-icon"></a>
+                <a href="{{project.github}}" target="_blank"><img src="/assets/github.svg" class="contact-icon" title="GitHub Repo"></a>
+                <a href="{{project.live}}" target="_blank"><img src="/assets/link.svg" class="contact-icon" title="Live Demo"></a>
             </div>
             <div class="card-details">
                 <h2>{{project.name}}</h2>

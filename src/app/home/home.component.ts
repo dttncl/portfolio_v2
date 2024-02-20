@@ -23,4 +23,22 @@ export class HomeComponent {
   openCV() {
     open('/assets/Bernadette-Fernando-Resume.pdf');
   }
+
+  isKen : boolean = false;
+
+  switchTheme() {
+    
+    if (this.isKen === false) {
+
+      // switch to Ken Mode
+      console.log("Hellooooo Ken from Home")
+      this.isKen = true
+
+    } else {
+      // switch to Barbie Mode
+      console.log("Hellooooo Barbie from Home")
+      this.isKen = false
+    }
+  }
+
 }

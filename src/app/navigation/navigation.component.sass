@@ -1,22 +1,41 @@
-$bfPink: #FF006E
+$barbiePink: #FF006E
+$kenBlue: #3A8EE4
 
 main
+    display: flex
+    justify-content: space-between
+    margin-bottom: 40px
+    align-items: center
+
+.left
     display: flex 
     flex-direction: row
     align-items: center
     font-size: 1rem
     gap: 4rem
-    margin-bottom: 40px
-    
-a
-    font-weight: bold
-    color: $bfPink
-    border-bottom: 2px solid transparent
-    padding: 8px 40px
+
+.right
+    display: flex 
+    flex-direction: row
+    align-items: center
     text-decoration: none
     &:hover
         cursor: pointer
-        border-bottom: 2px solid $bfPink
+
+
+.palette
+    width:2.5rem
+    height:2.5rem
+    transition: transform 450ms
+    &:hover
+        transition: transform 125ms
+        transform: translateY(-10px)
+
+a
+    font-weight: bold
+    border-bottom: 2px solid transparent
+    padding: 8px 40px
+    text-decoration: none
 
 .icon
     width:4rem
@@ -24,5 +43,21 @@ a
     background: url(/assets/bernadette-logo-nobg.png) no-repeat center
     background-size: contain
 
-.activebutton 
-    border-bottom: 2px solid $bfPink
+.ken
+    color: $kenBlue
+    &:hover
+        cursor: pointer
+        border-bottom: 2px solid $kenBlue
+    &.activebutton 
+        border-bottom: 2px solid $kenBlue
+
+a
+    color: $barbiePink
+
+.barbie
+    color: $barbiePink
+    &:hover
+        cursor: pointer
+        border-bottom: 2px solid $barbiePink
+    &.activebutton 
+        border-bottom: 2px solid $barbiePink

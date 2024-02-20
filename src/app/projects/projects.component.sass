@@ -25,10 +25,17 @@ main
     padding: 15px
     min-height: 100%
     flex: 1 1 28%
+    transition: border-radius 0.5s
+    &:hover 
+        border-radius: 0
 
 .contact-icon
     width: 2.5rem
     height: 2.5rem
+    transition: transform 450ms
+    &:hover
+        transition: transform 125ms
+        transform: translateY(-10px)
 
 .link-header
     display: flex
