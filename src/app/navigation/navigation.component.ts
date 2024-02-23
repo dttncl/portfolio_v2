@@ -19,7 +19,7 @@ export class NavigationComponent {
   isKen : boolean = false;
 
   switchTheme() {
-    const links: HTMLCollectionOf<HTMLAnchorElement> = this.elRef.nativeElement.getElementsByTagName('a')
+    //const links: HTMLCollectionOf<HTMLAnchorElement> = this.elRef.nativeElement.getElementsByTagName('a')
     
     if (this.isKen === false) {
 
@@ -28,10 +28,12 @@ export class NavigationComponent {
       this.isKen = true
 
       // toggle link colors
+      /*
       for (let i = 0; i < links.length; i++) {
         links[i].classList.remove('barbie');
         links[i].classList.add('ken');
       }
+      */
 
       // toggle bg color
       document.getElementsByTagName('body')[0].style.backgroundColor = this.kenTheme[0]
@@ -40,11 +42,12 @@ export class NavigationComponent {
       // switch to Barbie Mode
       console.log("Hellooooo Barbie")
       this.isKen = false
+      /*
       for (let i = 0; i < links.length; i++) {
         links[i].classList.remove('ken');
         links[i].classList.add('barbie');
       }
-
+      */
       document.getElementsByTagName('body')[0].style.backgroundColor = this.barbieTheme[0]
     }
   }
