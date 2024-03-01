@@ -30,17 +30,17 @@ export class InMemoryDataService implements InMemoryDbService {
       live: 'https://dttncl.github.io/DagatRestaurant/',
     },
     {
+      name: 'BillBee - Bill Management',
+      languages: ['Android', 'Java', 'XML'],
+      desc: 'This intuitive bill management app is designed for my final Android project. With BillBee, users can effortlessly organize, track, and manage all your bills in one convenient place.',
+      github: 'https://github.com/dttncl/bill-management-app',
+      live: 'not-available',
+    },
+    {
       name: 'Villagô - Virtual Service Finder',
       languages: ['Javascript', 'PHP', 'MySQL', 'GoogleMaps API'],
       desc: 'This is presented as my final project for web server. It comes with a search feature, enabling users to find service providers that meet their specific needs and a map to locate nearby service providers. PHP is used for server-side processing such as interacting with database and processing form submissions.',
       github: 'https://github.com/dttncl/villago',
-      live: 'not-available',
-    },
-    {
-      name: 'Personal Portfolio',
-      languages: ['Angular', 'TypeScript', 'SASS', 'Web API'],
-      desc: 'A platform where you can explore my work, learn about my background, and get in touch. From web development to design, I thrive on turning ideas into reality.',
-      github: 'https://github.com/dttncl/portfolio_v2',
       live: 'not-available',
     },
     {
@@ -58,10 +58,10 @@ export class InMemoryDataService implements InMemoryDbService {
       live: 'https://dttncl.github.io/etch-a-sketch/',
     },
     {
-      name: 'BillBee - Bill Management',
-      languages: ['Android', 'Java', 'XML'],
-      desc: 'This intuitive bill management app is designed for my final Android project. With BillBee, users can effortlessly organize, track, and manage all your bills in one convenient place.',
-      github: 'https://github.com/dttncl/bill-management-app',
+      name: 'Personal Portfolio',
+      languages: ['Angular', 'TypeScript', 'SASS', 'Web API'],
+      desc: 'A platform where you can explore my work, learn about my background, and get in touch. From web development to design, I thrive on turning ideas into reality.',
+      github: 'https://github.com/dttncl/portfolio_v2',
       live: 'not-available',
     }];
 

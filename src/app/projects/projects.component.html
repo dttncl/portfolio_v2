@@ -9,11 +9,11 @@
                 <a href="{{project.live}}" target="_blank"><img src="/assets/link.svg" class="contact-icon" title="Live Demo"></a>
             </div>
             <div class="card-details">
-                <h2>{{project.name}}</h2>
+                <div><h2>{{project.name}}</h2></div>
                 <div class="card-tags">
                     <p *ngFor="let language of project.languages" class="tag">{{language}}</p>
                 </div>
-                <p>{{project.desc}}</p>
+                <div><p>{{project.desc}}</p></div>
             </div>
         </div>
         <!-- end of project cards -->
