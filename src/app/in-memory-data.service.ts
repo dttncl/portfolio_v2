@@ -9,6 +9,20 @@ export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const projects = [
     {
+      name: 'Spotify Albums',
+      languages: ['Spotify API', 'Angular'],
+      desc: 'This is a web application designed to explore the latest album releases on Spotify. The project integrates with the Spotify API to fetch album data, including release dates, artists, and album artwork.',
+      github: 'https://github.com/dttncl/spotify-albums',
+      live: 'https://dttncl.github.io/spotify-albums/home',
+    },
+    {
+      name: 'RentaSpace - Rental Management',
+      languages: ['C#', 'ASP.NET MVC', 'SQL Server'],
+      desc: 'RentaSpace simplifies property rental management with intuitive features for landlords and tenants. From listing properties to communication, RentaSpace provides a seamless platform for efficient property management.',
+      github: 'https://github.com/dttncl/property-rental-management',
+      live: 'hnot-available',
+    },
+    {
       name: 'Restaurant Menu Website',
       languages: ['HTML', 'CSS', 'Javascript'],
       desc: 'This is a responsive restaurant menu website created for my Web Development class. It uses DOM to manipulate HTML elements, handle events, and update the content dynamically.',
