@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, ElementRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
@@ -11,7 +12,20 @@ import { RouterModule } from '@angular/router';
 
 export class NavigationComponent {
 
-  constructor (private elRef:ElementRef) {}
+  constructor (private elRef:ElementRef, private viewportScroller: ViewportScroller) {}
+
+  scrollToHome() {
+    this.viewportScroller.scrollToAnchor('home-component');
+  }
+
+  scrollToProjects() {
+    this.viewportScroller.scrollToAnchor('project-component');
+  }
+
+  scrollToToolbox() {
+    this.viewportScroller.scrollToAnchor('toolbox-component');
+  }
+
   // bg, text
   barbieTheme : string[] = ['#FFE7F8','#FF006E']
   kenTheme : string[] = ['#CDEFFF','#3A8EE4']

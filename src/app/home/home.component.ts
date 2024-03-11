@@ -4,6 +4,7 @@ import { NavigationComponent } from '../navigation/navigation.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ToolboxComponent } from '../toolbox/toolbox.component';
 import { FooterComponent } from '../footer/footer.component';
+import { ViewportScroller } from '@angular/common';
 
 
 @Component({
@@ -20,6 +21,7 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './home.component.sass'
 })
 export class HomeComponent {
+  
   openCV() {
     open('/assets/Bernadette-Fernando-Resume.pdf');
   }

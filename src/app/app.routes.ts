@@ -13,11 +13,11 @@ export const routes: Routes = [
         component: HomeComponent
       },
     {
-        path: 'projects',
+        path: 'projectss',
         component: ProjectsComponent
       },
     {
-        path: 'toolbox',
+        path: 'toolboxx',
         component: ToolboxComponent
       },
     {

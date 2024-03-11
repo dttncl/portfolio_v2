@@ -1,9 +1,9 @@
 <main>
     <div class="left">
         <div class="icon"></div>
-        <a routerLink="/home" routerLinkActive="activebutton barbie">HOME</a>
-        <a routerLink="/projects" routerLinkActive="activebutton barbie">PROJECTS</a>
-        <a routerLink="/toolbox" routerLinkActive="activebutton barbie">TOOLBOX</a>
+        <a (click)="scrollToHome()">HOME</a>
+        <a (click)="scrollToProjects()">PROJECTS</a>
+        <a (click)="scrollToToolbox()">TOOLBOX</a>
     </div>
     <div class="right">
         <img src="/assets/palette.png" class="palette" (click)="switchTheme()" title="Ken Mode">
