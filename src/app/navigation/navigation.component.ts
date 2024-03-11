@@ -14,8 +14,8 @@ export class NavigationComponent {
 
   constructor (private elRef:ElementRef, private viewportScroller: ViewportScroller) {}
 
-  scrollToHome() {
-    this.viewportScroller.scrollToAnchor('home-component');
+  scrollToTop() {
+    this.viewportScroller.scrollToAnchor('top');
   }
 
   scrollToProjects() {
