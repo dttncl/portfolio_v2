@@ -75,6 +75,24 @@ export class NavigationComponent {
       document.getElementsByTagName('h1')[0].style.color = this.kenTheme[1]
       document.getElementById('open-cv')?.classList.add('ken')
 
+      // toggle images
+      document.getElementById('icon-email')?.setAttribute("src","/assets/ken-mail.png")
+      document.getElementById('icon-linkedin')?.setAttribute("src","/assets/ken-linkedin.svg")
+      document.getElementById('icon-github')?.setAttribute("src","/assets/ken-github.svg")
+
+      let ghIcons = Array.from(document.getElementsByClassName('ken-gh-icon'))
+      ghIcons.forEach(icon => {
+        icon.setAttribute("src","/assets/ken-github.svg")
+      })
+
+      let linkIcons = Array.from(document.getElementsByClassName('ken-link-icon'))
+      linkIcons.forEach(icon => {
+        icon.setAttribute("src","/assets/ken-link.svg")
+      })
+
+      //let bfIcon = document.getElementById('bf-icon')
+      //bfIcon?.classList.add('icon-ken')
+
     } else {
       // switch to Barbie Mode
       console.log("Hellooooo Barbie")
@@ -113,7 +131,25 @@ export class NavigationComponent {
 
       // toggle h1, button
       document.getElementsByTagName('h1')[0].style.color = this.barbieTheme[1]
-      document.getElementById('open-cv')?.classList.remove('ken')    }
+      document.getElementById('open-cv')?.classList.remove('ken')    
+
+      // toggle images
+      document.getElementById('icon-email')?.setAttribute("src","/assets/email.svg")
+      document.getElementById('icon-linkedin')?.setAttribute("src","/assets/linkedin.svg")
+      document.getElementById('icon-github')?.setAttribute("src","/assets/github.svg")
+
+      let ghIcons = Array.from(document.getElementsByClassName('ken-gh-icon'))
+      ghIcons.forEach(icon => {
+        icon.setAttribute("src","/assets/github.svg")
+      })
+
+      let linkIcons = Array.from(document.getElementsByClassName('ken-link-icon'))
+      linkIcons.forEach(icon => {
+        icon.setAttribute("src","/assets/link.svg")
+      })
+
+
+    }
   }
 
 }
