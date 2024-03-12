@@ -26,6 +26,10 @@ export class NavigationComponent {
     this.viewportScroller.scrollToAnchor('toolbox-component');
   }
 
+  scrollToContact() {
+    this.viewportScroller.scrollToAnchor('contact-component');
+  }
+
   // bg, h1, h2
   barbieTheme : string[] = ['#FFE7F8','#FF006E','#592D3D']
   kenTheme : string[] = ['#CDEFFF','#3A8EE4', '#16497d']
@@ -53,6 +57,12 @@ export class NavigationComponent {
         h2.style.color = this.kenTheme[2]
       });
 
+      // toggle label colors
+      let labels = Array.from(document.getElementsByTagName('label'))
+      labels.forEach(label => {
+        label.style.color = this.kenTheme[2]
+      });
+
       // toggle card colors
       let cards = Array.from(document.getElementsByClassName('card'))
       cards.forEach(card => {
@@ -74,6 +84,7 @@ export class NavigationComponent {
       // toggle h1, button
       document.getElementsByTagName('h1')[0].style.color = this.kenTheme[1]
       document.getElementById('open-cv')?.classList.add('ken')
+      document.getElementById('submit-form')?.classList.add('ken')
 
       // toggle images
       document.getElementById('icon-email')?.setAttribute("src","/assets/ken-mail.png")
@@ -89,9 +100,6 @@ export class NavigationComponent {
       linkIcons.forEach(icon => {
         icon.setAttribute("src","/assets/ken-link.svg")
       })
-
-      //let bfIcon = document.getElementById('bf-icon')
-      //bfIcon?.classList.add('icon-ken')
 
     } else {
       // switch to Barbie Mode
@@ -109,6 +117,12 @@ export class NavigationComponent {
       let h2s = Array.from(document.getElementsByTagName('h2'))
       h2s.forEach(h2 => {
         h2.style.color = this.barbieTheme[2]
+      });
+
+      // toggle label colors
+      let labels = Array.from(document.getElementsByTagName('label'))
+      labels.forEach(label => {
+        label.style.color = this.barbieTheme[2]
       });
 
       // toggle card colors
@@ -132,6 +146,7 @@ export class NavigationComponent {
       // toggle h1, button
       document.getElementsByTagName('h1')[0].style.color = this.barbieTheme[1]
       document.getElementById('open-cv')?.classList.remove('ken')    
+      document.getElementById('submit-form')?.classList.remove('ken')
 
       // toggle images
       document.getElementById('icon-email')?.setAttribute("src","/assets/email.svg")
