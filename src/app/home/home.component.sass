@@ -1,5 +1,6 @@
 $bfPink: #FF006E
 $bfBlue: #3A8EE4
+$layout-breakpoint-small: 600px
 
 a:hover
     cursor: pointer
@@ -72,3 +73,17 @@ button
         border: 2px solid $bfBlue
         background-color: transparent
         color: $bfBlue
+
+@media (max-width: $layout-breakpoint-small)
+    main
+        margin-top: 30px
+        display: flex
+        text-align: center
+    .photo
+        display: none
+    .contact
+        justify-content: center
+    .about
+        display: flex
+        flex-direction: column
+        gap: 10px

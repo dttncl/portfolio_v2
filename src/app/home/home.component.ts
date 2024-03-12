@@ -4,7 +4,7 @@ import { NavigationComponent } from '../navigation/navigation.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ToolboxComponent } from '../toolbox/toolbox.component';
 import { FooterComponent } from '../footer/footer.component';
-import { ViewportScroller } from '@angular/common';
+import { ContactMeComponent } from '../contact-me/contact-me.component';
 
 
 @Component({
@@ -15,7 +15,8 @@ import { ViewportScroller } from '@angular/common';
     NavigationComponent,
     ProjectsComponent,
     ToolboxComponent,
-    FooterComponent
+    FooterComponent,
+    ContactMeComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.sass'

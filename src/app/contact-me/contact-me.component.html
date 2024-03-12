@@ -1,1 +1,17 @@
-<p>contact-me works!</p>
+<main>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <label for="name">Name: </label>
+        <input id="name" type="text" formControlName="name">
+
+        <label for="email">Email: </label>
+        <input id="email" type="text" formControlName="email">
+        
+        <label for="subject">Subject: </label>
+        <input id="subject" type="text" formControlName="subject">
+        
+        <label for="name">Message: </label>
+        <textarea name="message" cols="40" rows="5" formControlName="message"></textarea>
+
+        <button type="submit" [disabled]="!contactForm.valid">Submit</button>
+      </form>
+</main>
