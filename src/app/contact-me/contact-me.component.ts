@@ -12,6 +12,8 @@ import { EmailService } from '../email.service';
 })
 export class ContactMeComponent {
 
+  displayStatus : string = "";
+
   constructor(private emailService: EmailService) {}
 
   contactForm = new FormGroup({
@@ -23,43 +25,16 @@ export class ContactMeComponent {
   });
 
   onSubmit() {
-    /*
-    const data = {
-      access_key: '7200e0e6-f4c8-42fa-9a8c-bda32f224266',
-      name: this.contactForm.get('name')!.value!,
-      email: this.contactForm.get('email')!.value!,
-      subject: this.contactForm.get('subject')!.value!,
-      message: this.contactForm.get('message')!.value!,
-    };
-    */
-
     let data = this.contactForm;
-    console.log(this.emailService.sendEmail(data));
-    
-  }
+    this.emailService.sendEmail(data);
 
-  /*
-  onSubmit() {
-    const data = {
-      name: this.contactForm.get('name')!.value!,
-      email: this.contactForm.get('email')!.value!,
-      subject: this.contactForm.get('subject')!.value!,
-      message: this.contactForm.get('message')!.value!,
-      access_key: '7200e0e6-f4c8-42fa-9a8c-bda32f224266'
-    };
-  
-    console.log(data);
+    this.contactForm.reset({
+      subject : 'Awesome Website',
+      message : 'Hey Bernadette! I love what you did here.',
+      access_key : '7200e0e6-f4c8-42fa-9a8c-bda32f224266'
+    });
 
-    this.emailService.sendEmail(data).subscribe(
-      response => {
-        console.log(response);
-        console.log('Email sent successfully!');
-      },
-      error => {
-        console.log('Error sending email:', error);
-      }
-    );
+    this.displayStatus = "Submitted Successfully!";
   }
-  */
 
 }
